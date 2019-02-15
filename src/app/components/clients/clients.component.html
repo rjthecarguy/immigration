@@ -1,22 +1,27 @@
 <div class="row">
-  <div class="col-md-6">
 
+ <div class="col-sm-10">
     <h2><i class="fa fa-users mr-3"></i>Clients</h2>
+  </div>  
+
+  <div class="col-sm-2">
+      <a routerLink="/client/add" routerLinkActive="router-link-active"  class="btn btn-success">
+        <i class="fa fa-plus"></i> New
+      </a>
+    </div>
 
   </div>
 
-  <div class="col-md-6">
 
 
-  </div>
-</div>
 
 <table class="table table-striped">
 
   <thead class="thead-inverse">
     <tr>
         <th>Case#</th>
-        <th>Name</th>
+        <th>Last Name</th>
+        <th>First Name</th>
         <th>Doc Status</th>
         <th>Last Contact</th>
         <th></th>
@@ -26,8 +31,9 @@
 
   <tbody>
     <tr *ngFor="let client of clients">
-      <td width="120px">{{client.case}}</td>
-      <td width="400px">{{client.clientName}}</td>
+      <td width="100px">{{client.case}}</td>
+      <td width="180px">{{client.lastName}}</td>
+      <td width="180px">{{client.firstName}}</td>
       <td>{{client.docStatus}}</td>
       <td>{{client.lastContact}}</td>
       <td><a routerLink="" class="btn btn-secondary btn-sm">Edit</a></td>
