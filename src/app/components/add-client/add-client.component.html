@@ -155,10 +155,22 @@
                   [(ngModel)]="client.docStatus"
                   
                 >
-                
-                              
-        
+       
               </div>  
+
+
+              <div class="form-group">
+                
+                  <input  
+                    type="hidden"
+                    class="form-control"
+                    name="registered"
+                    #clientRegistered="ngModel"
+                    [(ngModel)]="client.registered"
+                    
+                  >
+         
+                </div>  
 
 
             <input type="submit"  class="btn btn-primary btn-block " value="Submit" >

@@ -1,3 +1,5 @@
+import { Timestamp } from 'rxjs';
+
 export interface Client {
     id?: string,
     firstName?: string,
@@ -12,6 +14,7 @@ export interface Client {
     case?: string,
     docStatus: string,
     lastContact?: string,
-    payStatus?: string
+    payStatus?: string,
+    registered?: any; 
 
 }

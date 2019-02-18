@@ -1,8 +1,10 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit, ViewChild, ɵChangeDetectorStatus } from '@angular/core';
 import { Client } from 'src/app/models/Client';
 import { FlashMessagesService} from 'angular2-flash-messages';
 import { ClientService} from 'src/app/services/client.service';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-add-client',
@@ -22,9 +24,12 @@ export class AddClientComponent implements OnInit {
     ZIP: '',
     Phone: '',
     Email: '',
-    docStatus: 'Office'
+    docStatus: 'Office',
+    registered: ''
     
   }
+
+ 
 
   @ViewChild('clientForm') form: any;
 
@@ -37,6 +42,11 @@ export class AddClientComponent implements OnInit {
     ) { }
 
   ngOnInit() {
+    
+    this.client.registered = new Date();
+  
+
+    console.log(this.client.registered);
   }
 
 

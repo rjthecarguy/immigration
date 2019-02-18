@@ -1,3 +1,29 @@
-<p>
-  client-details works!
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <a routerLink="/" class="btn btn-link">
+      <i class="fa fa-arrow-circle-o-left"></i>
+    Back to Dashboard</a>
+  </div>
+
+  
+  <div class="col-md-6">
+      <div class="btn-group pull-right">
+        <a routerLink="/client/edit/{{id}}" class="btn btn-dark">
+        Edit</a>
+        <button (click)="onDelete()" class="btn btn-danger">Delete</button>
+      </div>
+
+
+  </div>
+
+<hr>
+  <div *ngIf="client" class="card ml-4">
+    <h3 class="card-header ">{{client.firstName}} {{client.lastName}}</h3>
+
+
+  </div>
+
+
+</div>
+
+  

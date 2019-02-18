@@ -20,7 +20,8 @@ export class ClientService {
 
 
   constructor(private afs: AngularFirestore) {
-
+      
+      afs.firestore.settings({timestampsInSnapshots: false}); 
       this.clientCollection = this.afs.collection('clients');
 
    }
