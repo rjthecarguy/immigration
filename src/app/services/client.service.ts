@@ -14,7 +14,7 @@ import 'rxjs/add/operator/map';
 })
 export class ClientService {
   clientCollection: AngularFirestoreCollection<Client>;
-  clinetDoc: AngularFirestoreDocument<Client>;
+  clientDoc: AngularFirestoreDocument<Client>;
   clients: Observable<Client[]>;
   client: Observable<Client>;
 
@@ -42,5 +42,22 @@ export class ClientService {
 
    newClient(client:Client) {
      this.clientCollection.add(client);
+   }
+
+   getClient(id:string): Observable<Client> {
+     
+     this.clientDoc = this.afs.doc<Client>(`clients/${id}`);
+     this.client = this.clientDoc.snapshotChanges().map(action => {
+       if(action.payload.exists === false) {
+         return null;
+       } else {
+         const data = action.payload.data() as Client;
+         data.id = action.payload.id;
+         console.log(data.id);
+         return data;
+       }
+     });
+
+     return this.client;
    }
 }
