@@ -1,5 +1,6 @@
-import { Component, OnInit, ɵChangeDetectorStatus } from '@angular/core';
+import { Component, OnInit, ViewChild, ɵChangeDetectorStatus } from '@angular/core';
 import { Client } from 'src/app/models/Client';
+import { FlashMessagesService} from 'angular2-flash-messages';
 
 @Component({
   selector: 'app-add-client',
@@ -23,9 +24,27 @@ export class AddClientComponent implements OnInit {
     
   }
 
-  constructor() { }
+  @ViewChild('clientForm') form: any;
+
+  
+
+  constructor(private flashMessage:FlashMessagesService) { }
 
   ngOnInit() {
+  }
+
+
+  onSubmit({value,valid} : {value:Client, valid:boolean}) {
+
+    if(!valid) {
+      this.flashMessage.show('Please fill out the form completely', {
+        cssClass: 'alert-danger', timeout: 4000
+      });
+    } else {
+      this.flashMessage.show('Client Added', {
+        cssClass: 'alert-success', timeout: 4000
+      });
+    }
   }
 
 }
