@@ -231,11 +231,72 @@
                       </div>      
                 
               
+                      <div class="form-group">
+                          <label for="street">City</label>
+                          <input  
+                            type="text"
+                            class="form-control"
+                            name="City"
+                            #clientCity="ngModel"
+                            [ngClass] = "{'is-invalid': clientCity.errors && clientCity.touched}"
+                            [(ngModel)]="City"
+                            required
+                            
+                          >
+                          
+                          <div [hidden]="!clientCity.errors?.required"
+                          class="invalid-feedback">
+                          City is required
+                        </div>                     
+                  
+                        </div>    
+
+                        <div class="form-group">
+                            <label for="State">State</label>
+                            <input  
+                              type="text"
+                              class="form-control"
+                              name="State"
+                              #clientState="ngModel"
+                              [ngClass] = "{'is-invalid': clientState.errors && clientState.touched}"
+                              [(ngModel)]="State"
+                              required
+                              
+                            >
+                            
+                            <div [hidden]="!clientState.errors?.required"
+                            class="invalid-feedback">
+                            State is required
+                          </div>                     
+                    
+                          </div>  
+
+                          <div class="form-group">
+                              <label for="ZIP">ZIP</label>
+                              <input  
+                                type="text"
+                                class="form-control"
+                                name="ZIP"
+                                #clientZIP="ngModel"
+                                [ngClass] = "{'is-invalid': clientZIP.errors && clientZIP.touched}"
+                                [(ngModel)]="ZIP"
+                                required
+                                
+                              >
+                              
+                              <div [hidden]="!clientZIP.errors?.required"
+                              class="invalid-feedback">
+                              ZIP Code is required
+                            </div>                     
+                      
+                            </div>  
+
               
                 </div>  <!-- Right Col-6-->
               
-              </div>
+              </div> <!-- Form Row End-->
 
+              <input type="submit"  class="btn btn-primary btn-block" value="Submit" >
               
     </form> 
 
@@ -248,6 +309,6 @@
   
   
 
-<input type="submit"  class="btn btn-primary btn-block" value="Submit" >
+
 </div>  <!-- Card-->  
 

@@ -14,7 +14,7 @@
 
   </div>
 
-
+  <input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox mb-3">
 
 
 <table class="table table-striped">
@@ -32,7 +32,7 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let client of clients">
+    <tr *ngFor="let client of clients | grdFilter: {firstName:searchText, lastName:searchText, case:searchText}; let i=index;">
       <td width="100px">{{client.case}}</td>
       <td width="180px">{{client.lastName}}</td>
       <td width="180px">{{client.firstName}}</td>

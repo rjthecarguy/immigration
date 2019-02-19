@@ -1,3 +1,4 @@
+import { GrdFilterPipe } from './pipes/grd-filter.pipe';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -20,6 +21,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule, AngularFireAuth} from 'angularfire2/auth';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,8 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
     LoginComponent,
     RegisterComponent,
     SettingsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    GrdFilterPipe
   ],
   imports: [
     BrowserModule,

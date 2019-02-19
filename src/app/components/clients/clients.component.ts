@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientsComponent implements OnInit {
   clients: Client[];
+  public searchText:string;
 
   constructor(private clientService: ClientService) { }
 
