@@ -13,7 +13,7 @@ export interface Client {
     ZIP?: string,
     case?: string,
     docStatus: string,
-    lastContact?: string,
+    lastContact?: any,
     payStatus?: string,
     registered?: any; 
 

@@ -44,9 +44,9 @@ export class AddClientComponent implements OnInit {
   ngOnInit() {
     
     this.client.registered = new Date();
-  
+    this.client.lastContact = new Date();
 
-    console.log(this.client.registered);
+    
   }
 
 
