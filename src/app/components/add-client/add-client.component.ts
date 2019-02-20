@@ -25,7 +25,8 @@ export class AddClientComponent implements OnInit {
     Phone: '',
     Email: '',
     docStatus: 'Office',
-    registered: ''
+    registered: '',
+    lastContact: ''
     
   }
 
@@ -44,7 +45,7 @@ export class AddClientComponent implements OnInit {
   ngOnInit() {
     
     this.client.registered = new Date();
-    this.client.lastContact = new Date();
+    this.client.lastContact = this.client.registered;
 
     
   }

@@ -21,7 +21,7 @@ export class ClientService {
 
   constructor(private afs: AngularFirestore) {
       
-      afs.firestore.settings({timestampsInSnapshots: false}); 
+      
       this.clientCollection = this.afs.collection('clients');
 
    }
@@ -32,6 +32,7 @@ export class ClientService {
        return changes.map(action => {
          const data = action.payload.doc.data() as Client;
          data.id = action.payload.doc.id;
+         console.log(data);
          return data;
        });
 

@@ -38,7 +38,7 @@
               name="case"
               #clientCase="ngModel"
               [ngClass] = "{'is-invalid': clientCase.errors && clientCase.touched}"
-              [(ngModel)]="case"
+              [(ngModel)]="client.case"
               minlength="3"
               required
             >
@@ -64,7 +64,7 @@
           name="firstName"
           #clientFirstName="ngModel"
           [ngClass] = "{'is-invalid': clientFirstName.errors && clientFirstName.touched}"
-          [(ngModel)]="firstName"
+          [(ngModel)]="client.firstName"
           minlength="2"
           required
         >
@@ -91,7 +91,7 @@
             name="lastName"
             #clientLastName="ngModel"
             [ngClass] = "{'is-invalid': clientLastName.errors && clientLastName.touched}"
-            [(ngModel)]="lastName"
+            [(ngModel)]="client.lastName"
             minlength="2"
             required
           >
@@ -118,7 +118,7 @@
               name="Email"
               #clientEmail="ngModel"
               [ngClass] = "{'is-invalid': clientEmail.errors && clientEmail.touched}"
-              [(ngModel)]="Email"
+              [(ngModel)]="client.Email"
               pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
             >
             
@@ -140,7 +140,7 @@
                 name="Phone"
                 #clientPhone="ngModel"
                 [ngClass] = "{'is-invalid': clientPhone.errors && clientPhone.touched}"
-                [(ngModel)]="Phone"
+                [(ngModel)]="client.Phone"
                 minlength="10"
                 required
               >
@@ -212,7 +212,7 @@
                           name="Street"
                           #clientStreet="ngModel"
                           [ngClass] = "{'is-invalid': clientStreet.errors && clientStreet.touched}"
-                          [(ngModel)]="Street"
+                          [(ngModel)]="client.Street"
                           minlength="5"
                           required
                           
@@ -239,7 +239,7 @@
                             name="City"
                             #clientCity="ngModel"
                             [ngClass] = "{'is-invalid': clientCity.errors && clientCity.touched}"
-                            [(ngModel)]="City"
+                            [(ngModel)]="client.City"
                             required
                             
                           >
@@ -259,7 +259,7 @@
                               name="State"
                               #clientState="ngModel"
                               [ngClass] = "{'is-invalid': clientState.errors && clientState.touched}"
-                              [(ngModel)]="State"
+                              [(ngModel)]="client.State"
                               required
                               
                             >
@@ -279,7 +279,7 @@
                                 name="ZIP"
                                 #clientZIP="ngModel"
                                 [ngClass] = "{'is-invalid': clientZIP.errors && clientZIP.touched}"
-                                [(ngModel)]="ZIP"
+                                [(ngModel)]="client.ZIP"
                                 required
                                 
                               >

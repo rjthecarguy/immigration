@@ -33,5 +33,9 @@ export class ClientDetailsComponent implements OnInit {
     });
   }
   
+  onDelete()
+  {
+    
+  }
 
 }
