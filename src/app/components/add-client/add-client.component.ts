@@ -1,9 +1,11 @@
+import { AngularFirestore } from 'angularfire2/firestore';
 import { DatePipe } from '@angular/common';
 import { Component, OnInit, ViewChild, ɵChangeDetectorStatus } from '@angular/core';
 import { Client } from 'src/app/models/Client';
 import { FlashMessagesService} from 'angular2-flash-messages';
 import { ClientService} from 'src/app/services/client.service';
 import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -44,8 +46,10 @@ export class AddClientComponent implements OnInit {
 
   ngOnInit() {
     
-    this.client.registered = new Date();
+    this.client.registered = Date();
     this.client.lastContact = this.client.registered;
+    this.client.lastContact.toDate();
+    this.client.registered.toDate();
 
     
   }

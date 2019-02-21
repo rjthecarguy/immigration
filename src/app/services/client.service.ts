@@ -32,7 +32,7 @@ export class ClientService {
        return changes.map(action => {
          const data = action.payload.doc.data() as Client;
          data.id = action.payload.doc.id;
-         console.log(data);
+         
          return data;
        });
 

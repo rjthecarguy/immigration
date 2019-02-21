@@ -37,7 +37,7 @@
       <td width="180px">{{client.lastName}}</td>
       <td width="180px">{{client.firstName}}</td>
       <td>{{client.docStatus}}</td>
-      <td>{{client.lastContact}}</td>
+      <td>{{client.lastContact | date:'MM/dd/yy'}}</td>
       <td><a routerLink="client/{{client.id}}" class="btn btn-secondary btn-sm">Details</a></td>
       
 
