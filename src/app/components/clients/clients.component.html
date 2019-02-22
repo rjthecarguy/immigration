@@ -25,6 +25,7 @@
         <th>Last Name</th>
         <th>First Name</th>
         <th>Doc Status</th>
+        <th>Program</th>
         <th>Last Contact</th>
         <th></th>
 
@@ -32,11 +33,16 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let client of clients | grdFilter: {firstName:searchText, lastName:searchText, case:searchText}; let i=index;">
+    <tr *ngFor="let client of clients | grdFilter: {firstName:searchText,
+       lastName:searchText,
+       case:searchText,
+       program:searchText}; let i=index;">
+       
       <td width="100px">{{client.case}}</td>
       <td width="180px">{{client.lastName}}</td>
       <td width="180px">{{client.firstName}}</td>
       <td>{{client.docStatus}}</td>
+      <td>{{client.program}}</td>
       <td>{{client.lastContact | date:'MM/dd/yy'}}</td>
       <td><a routerLink="client/{{client.id}}" class="btn btn-secondary btn-sm">Details</a></td>
     </tr>

@@ -16,23 +16,23 @@ import { Router } from '@angular/router';
 })
 export class AddClientComponent implements OnInit {
 
-  programs: SelectProgram[] = [
-    {index: '1', name: "I-130"},
-    {index: '2', name: "I-130 | Welcome Letter"},
-    {index: "3", name: "I-130 | 6019"},
-    {index: "4", name: "I-130 | 485"},
-    {index: "5", name: "I-485"},
-    {index: '1', name: "N-400"},
-    {index: '2', name: "U - Visa"},
-    {index: "3", name: "VAWA"},
-    {index: "4", name: "I-864"},
-    {index: "5", name: "Investigations"},
-    {index: "3", name: "DACA"},
-    {index: "4", name: "I-601a"},
-    {index: "5", name: "I-601"}
-  ];
+  programs: string[] = 
+    ["I-130",
+    "I-130 | Welcome Letter",
+    "I-130 | 6019",
+    "I-130 | 485",
+     "I-485",
+    "N-400",
+    "U - Visa",
+    "VAWA",
+    "I-864",
+    "Investigations",
+    "DACA",
+    "I-601a",
+    "I-601"];
+  
 
-  selectedValue = '1';
+  
 
 
   client: Client = {
@@ -48,7 +48,7 @@ export class AddClientComponent implements OnInit {
     docStatus: 'Office',
     registered: '',
     lastContact: '',
-    program: 'test'
+    program: ''
     
   }
 

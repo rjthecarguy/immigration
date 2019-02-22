@@ -294,9 +294,12 @@
                             </div>  
 
                             <div class="form-group">
-                                <label for="ZIP">Program</label>
-                            <select [(ngModel)]="client.program" class="form-control">
-                              <option *ngFor="let p of programs" [ngValue]="p">{{p.name}}</option>
+                                <label for="Program">Program</label>
+                            <select [(ngModel)]="client.program" class="form-control" 
+                            name="program"
+                            required
+                            >
+                              <option *ngFor="let p of programs" [ngValue]="p">{{p}}</option>
                             </select>
                             </div>
               
