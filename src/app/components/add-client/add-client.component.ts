@@ -1,3 +1,4 @@
+import { SelectProgram } from './../../models/Select-Program';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { DatePipe } from '@angular/common';
 import { Component, OnInit, ViewChild, ɵChangeDetectorStatus } from '@angular/core';
@@ -15,6 +16,24 @@ import { Router } from '@angular/router';
 })
 export class AddClientComponent implements OnInit {
 
+  programs: SelectProgram[] = [
+    {index: '1', name: "I-130"},
+    {index: '2', name: "I-130 | Welcome Letter"},
+    {index: "3", name: "I-130 | 6019"},
+    {index: "4", name: "I-130 | 485"},
+    {index: "5", name: "I-485"},
+    {index: '1', name: "N-400"},
+    {index: '2', name: "U - Visa"},
+    {index: "3", name: "VAWA"},
+    {index: "4", name: "I-864"},
+    {index: "5", name: "Investigations"},
+    {index: "3", name: "DACA"},
+    {index: "4", name: "I-601a"},
+    {index: "5", name: "I-601"}
+  ];
+
+  selectedValue = '1';
+
 
   client: Client = {
     case: '',
@@ -28,11 +47,12 @@ export class AddClientComponent implements OnInit {
     Email: '',
     docStatus: 'Office',
     registered: '',
-    lastContact: ''
+    lastContact: '',
+    program: 'test'
     
   }
 
- 
+
 
   @ViewChild('clientForm') form: any;
 
@@ -46,11 +66,14 @@ export class AddClientComponent implements OnInit {
 
   ngOnInit() {
     
+
+    console.log("test");
     this.client.registered = Date();
     this.client.lastContact = this.client.registered;
     this.client.lastContact.toDate();
     this.client.registered.toDate();
 
+    
     
   }
 

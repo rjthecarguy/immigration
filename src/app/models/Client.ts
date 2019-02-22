@@ -15,6 +15,7 @@ export interface Client {
     docStatus: string,
     lastContact?: any,
     payStatus?: string,
-    registered?: any; 
+    registered?: any,
+    program?: any 
 
 }
