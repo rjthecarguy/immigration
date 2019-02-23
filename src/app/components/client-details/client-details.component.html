@@ -17,7 +17,24 @@
 
 <hr>
   <div *ngIf="client" class="card ml-4">
-    <h3 class="card-header">{{client.firstName}} {{client.lastName}}</h3>
+
+   <div class="row card-header">
+      <div class="col-md-6">
+        <h3 >{{client.firstName}} {{client.lastName}}</h3>
+      </div>
+
+      <div class="col-md-6">
+          <h3 class="pull-right">Balance: {{client.balance  | currency: "USD":"symbol"}}
+              <small>
+                  <a>
+                    <i class="fa fa-pencil"></i>
+                  </a>
+                </small>
+
+          </h3>
+          
+      </div>
+   </div> 
 
      <div class="card-body">
 
@@ -29,13 +46,15 @@
 
           <div class="col-md-6">
             
-            <h4>test</h4>
+            <h4 class="pull-right">Balance: {{client.balance  | currency: "USD":"symbol"}}</h4>
             
-            </div>
+          </div>
+
+          
 
       </div>
 
-    
+    </div>
   
   </div>
 

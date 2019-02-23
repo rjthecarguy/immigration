@@ -16,6 +16,7 @@ export interface Client {
     lastContact?: any,
     payStatus?: string,
     registered?: any,
-    program?: any 
+    program?: any,
+    balance?: any 
 
 }
