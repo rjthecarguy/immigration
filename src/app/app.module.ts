@@ -20,6 +20,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule, AngularFireAuth} from 'angularfire2/auth';
 import { FlashMessagesModule } from 'angular2-flash-messages';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
     RegisterComponent,
     SettingsComponent,
     NotFoundComponent,
-    GrdFilterPipe
+    GrdFilterPipe,
+    
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
     AngularFirestoreModule,
     AngularFireAuthModule,
     FormsModule,
-    FlashMessagesModule.forRoot()
+    FlashMessagesModule.forRoot(),
+    NgbModule
 
   ],
   providers: [],
