@@ -27,7 +27,7 @@ export class ClientService {
    }
 
    getClients(): Observable<Client[]> {
-     console.log("clinets");
+    
      this.clients = this.clientCollection.snapshotChanges()
      .map(changes => {
        return changes.map(action => {

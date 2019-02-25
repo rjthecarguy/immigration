@@ -21,6 +21,9 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule, AngularFireAuth} from 'angularfire2/auth';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ModalPaymentComponent } from './components/modal-payment/modal-payment.component';
+
+
 
 
 @NgModule({
@@ -38,6 +41,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     SettingsComponent,
     NotFoundComponent,
     GrdFilterPipe,
+    ModalPaymentComponent
+    
+    
     
   ],
   imports: [

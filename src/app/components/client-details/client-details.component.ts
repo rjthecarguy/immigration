@@ -1,9 +1,13 @@
+import { MessageService } from 'src/app/services/message.service';
+import { ModalPaymentComponent } from './../modal-payment/modal-payment.component';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Client } from './../../models/Client';
 import { ClientService } from './../../services/client.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params} from '@angular/router';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+
+
+
 
 
 
@@ -24,8 +28,8 @@ export class ClientDetailsComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private flashMessage: FlashMessagesService,
-    private modalService : NgbModal
-  ) { }
+    private messageService: MessageService
+    ) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
@@ -42,24 +46,14 @@ export class ClientDetailsComponent implements OnInit {
   }
 
   open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
+  
+    this.messageService.sendMessage("true");
+    
   }
 
 
 
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
-  }
+  
 
 
 }
