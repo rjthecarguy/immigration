@@ -45,7 +45,7 @@ export class ClientDetailsComponent implements OnInit {
     
   }
 
-  open(content) {
+  open() {
   
     this.messageService.sendMessage("true");
     
