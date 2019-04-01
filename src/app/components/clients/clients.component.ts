@@ -1,6 +1,8 @@
 import { Client } from './../../models/Client';
 import { ClientService } from './../../services/client.service';
 import { Component, OnInit } from '@angular/core';
+import { ModalComponent} from 'src/app/modal/modal.component';
+import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
 
 
 @Component({
@@ -11,9 +13,14 @@ import { Component, OnInit } from '@angular/core';
 export class ClientsComponent implements OnInit {
   clients: Client[];
   public searchText:string;
+  modalRef: MDBModalRef;
 
-  constructor(private clientService: ClientService) { }
+  constructor(private clientService: ClientService
+   ) { }
 
+   
+
+    
   ngOnInit() {
     this.clientService.getClients().subscribe(clients => this.clients = clients);
   }

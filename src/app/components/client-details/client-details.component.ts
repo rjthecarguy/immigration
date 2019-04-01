@@ -7,6 +7,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Router, ActivatedRoute, Params} from '@angular/router';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ModalComponent} from 'src/app/modal/modal.component';
+import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
 
 
 
@@ -24,6 +26,7 @@ export class ClientDetailsComponent implements OnInit {
   client: Client;
   showPaymentInput : boolean = false;
   closeResult: string;
+  modalRef: MDBModalRef;
  
 
   constructor(
@@ -32,11 +35,15 @@ export class ClientDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private flashMessage: FlashMessagesService,
     private messageService: MessageService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private modalService: MDBModalService
+   
     ) { }
 
 
-    
+    openModal() {
+      this.modalRef = this.modalService.show(ModalComponent)
+    }
   
 
 

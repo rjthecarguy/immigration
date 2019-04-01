@@ -27,6 +27,10 @@ import { MatCheckboxModule, MatNativeDateModule, MatDialog, MatDialogModule} fro
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ModalModule, WavesModule, InputsModule, ButtonsModule } from 'angular-bootstrap-md';
+import { ModalComponent } from './modal/modal.component';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -49,7 +53,9 @@ import {MatInputModule} from '@angular/material/input';
     SettingsComponent,
     NotFoundComponent,
     GrdFilterPipe,
-    ModalPaymentComponent
+    ModalPaymentComponent,
+    ModalComponent,
+ 
    
     
     
@@ -68,6 +74,7 @@ import {MatInputModule} from '@angular/material/input';
     AngularFireAuthModule,
     FormsModule,
     FlashMessagesModule.forRoot(),
+    MDBBootstrapModule.forRoot(),
     NgbModule,
     NoopAnimationsModule,
     MatCheckboxModule,
@@ -76,9 +83,15 @@ import {MatInputModule} from '@angular/material/input';
     MatNativeDateModule,
     MatInputModule,
     MatDialogModule,
+    MDBBootstrapModule
+    
+   
     
 
   ],
+
+  entryComponents: [ ModalComponent ],
+
   providers: [],
   bootstrap: [AppComponent],
   
