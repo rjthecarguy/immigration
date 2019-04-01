@@ -21,7 +21,15 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule, AngularFireAuth} from 'angularfire2/auth';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ModalPaymentComponent } from './components/modal-payment/modal-payment.component';
+import { ModalPaymentComponent} from './components/modal-payment/modal-payment.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCheckboxModule, MatNativeDateModule, MatDialog, MatDialogModule} from '@angular/material';
+import {MatDatepickerModule} from '@angular/material/datepicker'; 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
+
+
 
 
 
@@ -42,10 +50,16 @@ import { ModalPaymentComponent } from './components/modal-payment/modal-payment.
     NotFoundComponent,
     GrdFilterPipe,
     ModalPaymentComponent
+   
+    
+    
     
     
     
   ],
+
+  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -54,10 +68,19 @@ import { ModalPaymentComponent } from './components/modal-payment/modal-payment.
     AngularFireAuthModule,
     FormsModule,
     FlashMessagesModule.forRoot(),
-    NgbModule
+    NgbModule,
+    NoopAnimationsModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatDialogModule,
+    
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

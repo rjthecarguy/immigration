@@ -1,7 +1,12 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Inject } from '@angular/core';
 import { MessageService } from 'src/app/services/message.service';
 import { Subscription } from 'rxjs';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+
+
+
+
 
 
 @Component({
@@ -9,15 +14,17 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './modal-payment.component.html',
   styleUrls: ['./modal-payment.component.css']
 })
+
 export class ModalPaymentComponent implements OnInit {
   openDiv: boolean = false;
   message: any;
   subscription: Subscription;
   closeResult: string;
-
+  
   constructor(
     private messageService: MessageService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    public dialog: MatDialog
   ) {
     this.subscription = this.messageService.getMessage().subscribe(message => {
       this.openDiv = !this.openDiv;
@@ -27,7 +34,7 @@ export class ModalPaymentComponent implements OnInit {
            });
    }
 
-   
+  
 
   ngOnInit() {
   }
@@ -37,3 +44,4 @@ export class ModalPaymentComponent implements OnInit {
   }
 
 }
+

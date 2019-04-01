@@ -3,8 +3,10 @@ import { ModalPaymentComponent } from './../modal-payment/modal-payment.componen
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Client } from './../../models/Client';
 import { ClientService } from './../../services/client.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Router, ActivatedRoute, Params} from '@angular/router';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -22,14 +24,21 @@ export class ClientDetailsComponent implements OnInit {
   client: Client;
   showPaymentInput : boolean = false;
   closeResult: string;
+ 
 
   constructor(
     private clientService: ClientService,
     private router: Router,
     private route: ActivatedRoute,
     private flashMessage: FlashMessagesService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    public dialog: MatDialog
     ) { }
+
+
+    
+  
+
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
@@ -57,3 +66,4 @@ export class ClientDetailsComponent implements OnInit {
 
 
 }
+
