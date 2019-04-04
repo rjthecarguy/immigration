@@ -31,6 +31,9 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ModalModule, WavesModule, InputsModule, ButtonsModule } from 'angular-bootstrap-md';
 import { ModalComponent } from './modal/modal.component';
 import { HttpClient } from '@angular/common/http';
+import { ModalFormComponent } from './components/modal-form/modal-form.component';
+import { TooltipModule, PopoverModule } from 'angular-bootstrap-md';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -55,6 +58,7 @@ import { HttpClient } from '@angular/common/http';
     GrdFilterPipe,
     ModalPaymentComponent,
     ModalComponent,
+    ModalFormComponent,
  
    
     
@@ -83,7 +87,11 @@ import { HttpClient } from '@angular/common/http';
     MatNativeDateModule,
     MatInputModule,
     MatDialogModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    TooltipModule,
+    PopoverModule,
+    ReactiveFormsModule
+    
     
    
     

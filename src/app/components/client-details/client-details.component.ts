@@ -9,6 +9,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent} from 'src/app/modal/modal.component';
 import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
+import { FormControl, Validators } from '@angular/forms';
+
 
 
 
@@ -27,6 +29,8 @@ export class ClientDetailsComponent implements OnInit {
   showPaymentInput : boolean = false;
   closeResult: string;
   modalRef: MDBModalRef;
+  loginFormModalEmail = new FormControl('', Validators.email);
+  loginFormModalPassword = new FormControl('', Validators.required);
  
 
   constructor(
