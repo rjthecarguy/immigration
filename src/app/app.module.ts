@@ -21,7 +21,6 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule, AngularFireAuth} from 'angularfire2/auth';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ModalPaymentComponent} from './components/modal-payment/modal-payment.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule, MatNativeDateModule, MatDialog, MatDialogModule} from '@angular/material';
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
@@ -31,7 +30,6 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ModalModule, WavesModule, InputsModule, ButtonsModule } from 'angular-bootstrap-md';
 import { ModalComponent } from './modal/modal.component';
 import { HttpClient } from '@angular/common/http';
-import { ModalFormComponent } from './components/modal-form/modal-form.component';
 import { TooltipModule, PopoverModule } from 'angular-bootstrap-md';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -56,9 +54,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SettingsComponent,
     NotFoundComponent,
     GrdFilterPipe,
-    ModalPaymentComponent,
-    ModalComponent,
-    ModalFormComponent,
+    ModalComponent
+   
  
    
     
