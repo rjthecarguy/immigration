@@ -1,5 +1,4 @@
 import { MessageService } from 'src/app/services/message.service';
-import { ModalPaymentComponent } from './../modal-payment/modal-payment.component';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Client } from './../../models/Client';
 import { ClientService } from './../../services/client.service';

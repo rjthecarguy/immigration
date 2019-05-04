@@ -32,6 +32,8 @@ import { ModalComponent } from './modal/modal.component';
 import { HttpClient } from '@angular/common/http';
 import { TooltipModule, PopoverModule } from 'angular-bootstrap-md';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EnterPaymentComponent } from './components/enter-payment/enter-payment.component';
+
 
 
 
@@ -54,7 +56,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     SettingsComponent,
     NotFoundComponent,
     GrdFilterPipe,
-    ModalComponent
+    ModalComponent,
+    EnterPaymentComponent
+    
    
  
    
